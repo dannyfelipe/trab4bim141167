@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @author Danny Felipe @date: 08/11/2016 às 02:11
+	Arquivo context usado pelo CDI -->
+
+<Context antiJARLocking="true" path="/tomcat-test">
+  <Resource
+    name="BeanManager"
+    auth="Container"
+    type="javax.enterprise.inject.spi.BeanManager"
+    factory="org.jboss.weld.resources.ManagerObjectFactory"/>
+</Context>

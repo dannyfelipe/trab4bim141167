@@ -1,0 +1,29 @@
+<!-- @author Danny Felipe @date: 08/11/2016 às 02:20
+	Arquivo de persistência utilizado pelo JPA para as transações com o banco de dados MySQL -->
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="unit_app" transaction-type="RESOURCE_LOCAL">
+		<description>
+            ARQUIVO DE PERSISTÊNCIA JPA E HIBERNATE            
+        </description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Configuração do MySQL -->
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/trab4bim141167" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="MySQLServ" />
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
