@@ -15,3 +15,5 @@
 # Parte 05 - Criado a autenticação do usuário no sistema. Criados os arquivos filter para gerenciamento das ações no banco de dados, validação de usuário para que possa acessar a aplicação. Um arquivo global - uteis, para recuperar o EntityManager que vai ser criado pelo JPAFilter. Classe para persistir a tabela de usuários no banco de dados. Classes para serem usadas pelo Managed Beans, que receberão os dados na aplicação. Classe controller para transformar a classe em um bean gerenciado pelo CDI, e por último, criado a página de login da aplicação.
 
 # Parte 06 - Criado o cadastro de pessoa no sistema. Criados os arquivos responsáveis para persistência da entidade pessoa no banco de dados. Criado a página da web para realização do cadastro de pessoa.
+
+# Parte 07 - Desenvolvido cadastro de pessoa via upload de arquivo XML, através do componente fileUpload do PrimeFaces. Atualizado o arquivo controller de pessoa para receber e processar o arquivo XML. Alterado a página de cadastro para a realização de upload, adicionado mais uma tab, que tem o componente para a realização do upload do arquivo XML.

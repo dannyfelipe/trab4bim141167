@@ -34,6 +34,13 @@
 			<version>2.2.13</version>
 		</dependency>
 
+		<!-- PrimeFaces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.3</version>
+		</dependency>
+
 		<!-- CDI -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
