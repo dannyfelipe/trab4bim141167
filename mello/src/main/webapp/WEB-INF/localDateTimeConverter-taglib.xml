@@ -1,0 +1,17 @@
+<facelet-taglib version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd">
+
+	<!--
+ 	* @author Danny Felipe
+ 	* @data 14 de nov de 2016 - 17:02:31
+ 	-->
+
+	<namespace>http://www.dannyfelipe.com/LocalDateTimeConverter</namespace>
+	<tag>
+		<tag-name>LocalDateTimeConverter</tag-name>
+		<converter>
+			<converter-id>br.com.dannyfelipe.uteis.LocalDateTimeConverter</converter-id>
+		</converter>
+	</tag>
+</facelet-taglib>
