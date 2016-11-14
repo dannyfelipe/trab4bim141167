@@ -17,3 +17,5 @@
 # Parte 06 - Criado o cadastro de pessoa no sistema. Criados os arquivos responsáveis para persistência da entidade pessoa no banco de dados. Criado a página da web para realização do cadastro de pessoa.
 
 # Parte 07 - Desenvolvido cadastro de pessoa via upload de arquivo XML, através do componente fileUpload do PrimeFaces. Atualizado o arquivo controller de pessoa para receber e processar o arquivo XML. Alterado a página de cadastro para a realização de upload, adicionado mais uma tab, que tem o componente para a realização do upload do arquivo XML.
+
+# Parte 08 - Desenvolvido uma consulta de pessoas com PrimeFaces dataTable. Criado uma página de consulta para visualizar os registros persistidos no banco de dados, para fins, foi utilizado o componente dataTable do PrimeFaces para que seja possível renderizar os registros na aplicação. Também foi alterados os arquivos da PessoaEntity, PessoaRepository, que agora retorna todos os registros cadastrados. Criado: o controller para gerir todas as ações de consulta, e o layout da página de consulta para visualização na aplicação.
