@@ -25,3 +25,5 @@
 # Parte 10 - Editando um registro. Adicionado o método responsável por permitir atualizar o registro de uma pessoa persistida no banco de dados, como também, o método que irá retornar a pessoa a ser editada. Alterado os arquivos PessoaRepository, ConsultarPessoaController, consultarPessoa.xhtml (implementado código que permitirá edição de registro através de uma janela pop-up). Criado o arquivo editarPessoa.xhtml, página a ser exibida na hora da edição do registro.
 
 # Parte 11 - Excluindo um registro. Implementado o método responsável por excluir o registro do banco de dados. Adicionado o botão de excluir na página consultarPessoa.xhtml. Alterado os arquivos PessoaRepository, ConsultarPessoaController, com o método de exclusão.
+
+# Parte 12 - Consulta com Carousel PrimeFaces. Implementado o método de consulta utilizando o componente Carousel do PrimeFaces. Criado os arquivos: de controller para consulta utilizando o componente; a View do sistema para exibir os arquivos de consulta. Atualizado o arquivo header.xhtml, adicionado a chamada da página de consulta.
