@@ -27,3 +27,5 @@
 # Parte 11 - Excluindo um registro. Implementado o método responsável por excluir o registro do banco de dados. Adicionado o botão de excluir na página consultarPessoa.xhtml. Alterado os arquivos PessoaRepository, ConsultarPessoaController, com o método de exclusão.
 
 # Parte 12 - Consulta com Carousel PrimeFaces. Implementado o método de consulta utilizando o componente Carousel do PrimeFaces. Criado os arquivos: de controller para consulta utilizando o componente; a View do sistema para exibir os arquivos de consulta. Atualizado o arquivo header.xhtml, adicionado a chamada da página de consulta.
+
+# Parte 13 - Consulta com Gráfico PrimeFaces. Implementado o método de consulta utilizando o componente de gráfico do PrimeFaces. Alterado os arquivos: PessoaEntity, adicionado a query de consulta; PessoaRepository, adicionado o método de retorno de pessoas por origem de cadastro; header.xhtml, adicionada a chamada para a view de exibição do gráfico de origem de cadastro. Criado os arquivos: classe GraficoPizzaPessoaController, responsável por controlar a execução do gráfico; a View da aplicação, responsável pela exibição do gráfico de origem de cadastro.
