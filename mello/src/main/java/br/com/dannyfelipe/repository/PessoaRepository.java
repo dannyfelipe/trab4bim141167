@@ -141,4 +141,17 @@ public class PessoaRepository {
 		entityManager.merge(pessoaEntity);
 	}
 
+	/**
+	 * MÉTODO RESPONSÁVEL POR EXCLUIR UMA PESSOA PERSISTIDA DO BANCO DE DADOS
+	 * @param codigo - CÓDIGO DA PESSOA
+	 */
+	public void ExcluirRegistro(int codigo){
+
+		entityManager =  Uteis.JpaEntityManager();
+
+		PessoaEntity pessoaEntity = this.GetPessoa(codigo);
+
+		entityManager.remove(pessoaEntity);
+	}
+
 }

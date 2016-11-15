@@ -23,3 +23,5 @@
 # Parte 09 - Formatando LocalDateTime. Formatar a data de cadastro de um objeto LocalDateTime para valor string, para ser exibido em um dataTable na página da aplicação. Criado um conversor do objeto LocalDateTime para String; uma lib para conversão e, atualizado a página de consulta de pessoa.
 
 # Parte 10 - Editando um registro. Adicionado o método responsável por permitir atualizar o registro de uma pessoa persistida no banco de dados, como também, o método que irá retornar a pessoa a ser editada. Alterado os arquivos PessoaRepository, ConsultarPessoaController, consultarPessoa.xhtml (implementado código que permitirá edição de registro através de uma janela pop-up). Criado o arquivo editarPessoa.xhtml, página a ser exibida na hora da edição do registro.
+
+# Parte 11 - Excluindo um registro. Implementado o método responsável por excluir o registro do banco de dados. Adicionado o botão de excluir na página consultarPessoa.xhtml. Alterado os arquivos PessoaRepository, ConsultarPessoaController, com o método de exclusão.
