@@ -17,6 +17,7 @@ import br.com.dannyfelipe.repository.PessoaRepository;
  * @data 14 de nov de 2016 - 15:06:24
  *
  * CLASSE PARA CONSULTA DE PESSOAS PERSISTIDAS NO BANCO DE DADOS
+ * CLASSE PARA EDIÇÃO DE PESSOAS PERSISTIDAS NO BANCO DE DADOS
  */
 
 @Named(value = "consultarPessoaController")
@@ -34,14 +35,15 @@ public class ConsultarPessoaController implements Serializable {
 	@Inject
 	transient private PessoaRepository pessoaRepository;
 
-	/* OBTÉM UMA LISTA DE PESSOAS
+	/**
+	 * OBTÉM UMA LISTA DE PESSOAS
 	 * @return - ESPECIFICA UMA LISTA DE PESSOAS
 	 */
 	public List<PessoaModel> getPessoas() {
 		return pessoas;
 	}
 
-	/*
+	/**
 	 * DEFINE UMA LISTA
 	 * @param pessoas - LISTA DE PESSOAS
 	 */
@@ -49,7 +51,7 @@ public class ConsultarPessoaController implements Serializable {
 		this.pessoas = pessoas;
 	}
 
-	/*
+	/**
 	 * RETORNA O MODELO DE PESSOA
 	 * @return pessoaModel - ESPECIFICA O MODELO DE PESSOA
 	 */
@@ -57,7 +59,7 @@ public class ConsultarPessoaController implements Serializable {
 		return pessoaModel;
 	}
 
-	/*
+	/**
 	 * DEFINE O MODELO DE PESSOA
 	 * @param usuarioEntity - MODELO DE PESSOA
 	 */
@@ -65,7 +67,7 @@ public class ConsultarPessoaController implements Serializable {
 		this.pessoaModel = pessoaModel;
 	}
 
-	/*
+	/**
 	 * MÉTODO CHAMADO APÓS A CONSTRUÇÃO DA CLASSE
 	 * CARREGA UMA LISTA DE PESSOAS PERSISTIDA NO BANCO DE DADOS
 	 */
@@ -74,6 +76,30 @@ public class ConsultarPessoaController implements Serializable {
 
 		// RETORNAR AS PESSOAS CADASTRADAS
 		this.pessoas = pessoaRepository.GetPessoas();
+	}
+
+	/**
+	 * MÉTODO RESPONSÁVEL POR CARREGAR AS INFORMAÇÕES DE UM OBJETO PESSOA PARA EDIÇÃO
+	 * @param pessoaModel - OBJETO MODELO PESSOA
+	 */
+	public void Editar(PessoaModel pessoaModel) {
+
+		/* OBTÉM APENAS A PRIMEIRA LETRA DO SEXO PARA SETAR NO CAMPO NO FORMULÁRIO (M OU F)*/
+		pessoaModel.setSexo(pessoaModel.getSexo().substring(0, 1));
+
+		this.pessoaModel = pessoaModel;
+
+	}
+
+	/**
+	 * MÉTODO RESPONSÁVEL POR ATUALIZAR O REGISTRO ALTERADO
+	 */
+	public void AlterarRegistro() {
+
+		this.pessoaRepository.AlterarRegistro(this.pessoaModel);
+
+		/* RECARREGA OS REGISTROS ALTERADOS */
+		this.init();
 	}
 
 }

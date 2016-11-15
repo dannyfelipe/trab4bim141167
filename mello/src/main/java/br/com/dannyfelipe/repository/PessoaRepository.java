@@ -16,7 +16,6 @@ import br.com.dannyfelipe.repository.entity.UsuarioEntity;
 import br.com.dannyfelipe.uteis.Uteis;
 
 /**
- *
  * @author Danny Felipe
  * @data 12 de nov de 2016 - 20:48:11
  *
@@ -54,7 +53,7 @@ public class PessoaRepository {
 
 	}
 
-	/***
+	/**
 	 * MÉTODO RESPOSÁVEL PARA REALIZAR CONSULTA DE UMA PESSOA NO BANCO DE DADOS
 	 * @return pessoasModel - RETORNA UMA LISTA DE PESSOAS
 	 */
@@ -110,6 +109,36 @@ public class PessoaRepository {
 
 		return pessoasModel;
 
+	}
+
+	/**
+	 * MÉTODO RESPONSÁVEL REALIZAR A CONSULTA UMA PESSOA PERSISTIDA NO BANCO PELO SEU CÓDIGO
+	 * @param codigo - CODIGO DA PESSOA
+	 * @return codigo - RETORNA UM OBJETO PESSOA
+	 */
+	private PessoaEntity GetPessoa(int codigo) {
+
+		entityManager = Uteis.JpaEntityManager();
+
+		return entityManager.find(PessoaEntity.class, codigo);
+	}
+
+	/**
+	 * MÉTODO RESPONSÁVEL PARA ALTERAR UMA PESSOA PERSISTIDA NO BANCO DE DADOS
+	 * @param pessoaModel - OBJETO MODELO DE PESSOA
+	 */
+	public void AlterarRegistro(PessoaModel pessoaModel) {
+
+		entityManager = Uteis.JpaEntityManager();
+
+		PessoaEntity pessoaEntity = this.GetPessoa(pessoaModel.getCodigo());
+
+		pessoaEntity.setEmail(pessoaModel.getEmail());
+		pessoaEntity.setEndereco(pessoaModel.getEndereco());
+		pessoaEntity.setNome(pessoaModel.getNome());
+		pessoaEntity.setSexo(pessoaModel.getSexo());
+
+		entityManager.merge(pessoaEntity);
 	}
 
 }
