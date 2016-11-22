@@ -31,10 +31,18 @@ public class ConsultarPessoaCarouselController implements Serializable {
 	@Produces
 	private List<PessoaModel> pessoas;
 
+	/**
+	 * RETORNA UMA LISTA
+	 * @return pessoas - OBTÉM UMA LISTA DE PESSOAS
+	 */
 	public List<PessoaModel> getPessoas() {
 		return pessoas;
 	}
 
+	/**
+	 * CHAMADO APÓS A CONSTRUÇÃO DA CLASSE,
+	 * MÉTODO RESPONSÁVEL POR ATRIBUIR VALOR A VARIÁVEL PESSOAS
+	 */
 	@PostConstruct
 	private void init() {
 
